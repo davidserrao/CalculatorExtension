@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "CalculatorExtension",
+    "description": "Practice with JS and CSS",
+    "version": "1.0",
+    "icons": {
+        "16": "icons/calc-icon-16.png",
+        "48": "icons/calc-icon-48.png",
+        "128": "icons/calc-icon-128.png"
+      },
+    "action":{
+        "default_popup":"index.html"
+    },
+    "permissions": []
+}

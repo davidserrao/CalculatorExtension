@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    width: 184px; /*auto for browser, 184px for extension*/
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    display: grid;
+    grid-template-rows: 
+    minmax(40px, auto)
+    repeat(5, 30px); /*5 is numbers */
+    grid-template-columns: repeat(4, 30px);
+    justify-content: center;
+    background-color: hsl(220, 6%, 10%);
+    padding: 1.4rem;
+    gap: 0.4rem;
+    
+}
+
+.calculator button {
+    border: none;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: hsl(204, 100%, 20%);
+    border-radius: 10px;
+    cursor: pointer; /*not needed within hover selector*/
+}
+
+.calculator button:hover {
+    background-color: hsl(230, 6%, 30%);
+    color: white;
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+.calculator > .output {
+    font-size: 1.2rem;
+    background-color: black;
+    color: white;
+    grid-column: 1 / -1; /*figure out grid-column syntax*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    word-break: break-all;
+    border-radius: inherit;
+}
+
+.output .prev-display {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: hsl(230, 6%, 30%);
+}
